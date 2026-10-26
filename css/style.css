@@ -38,6 +38,15 @@ audio {
 	text-decoration: underline;
 }
 
+.safehaven {
+	color: #FF7E00;
+	font-weight: bold;
+}
+
+.safehaven.active {
+	color: green;
+}
+
 #options {
 	width: 960px;
 	height: 70px;
@@ -69,9 +78,9 @@ audio {
 }
 
 #logo {
-	width: 480px;
+	width: 360px;
 	float: left;
-	margin-left: 240px;
+	margin-left: 260px;
 	margin-top: 60px;
 }
 

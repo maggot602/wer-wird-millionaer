@@ -9,6 +9,8 @@ Author: Aaron Nech
 -->
 <html>
 	<head>
+		<meta charset="utf-8" />
+		<title>Wer wird Millionär</title>
 		<link href="http://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 	</head>
@@ -20,9 +22,10 @@ Author: Aaron Nech
 
 		<!-- Before the game begins problem set selection -->
 		<div id="pre-start">
+			<label for="problem-set">Spiel:</label>
 			<select id="problem-set">
 			</select>
-			<button id="start">Start!</button>
+			<button id="start">Starten!</button>
 		</div>
 
 		<!-- Shown when the player wins/loses -->
@@ -32,23 +35,23 @@ Author: Aaron Nech
 		<!-- The actual game markup -->
 		<div id="game">
 			<div id="top">
-				<img src="img/logo.jpg" id="logo" />
+				<img src="img/logo.png" id="logo" />
 				<ul id="levels">
-					<li data-bind="css: {active: level() == 15}" data-amt="1000000" data-lvl="15">$1,000,000</li>
-					<li data-bind="css: {active: level() == 14}" data-amt="500000" data-lvl="14">$500,000</li>
-					<li data-bind="css: {active: level() == 13}" data-amt="250000" data-lvl="13">$250,000</li>
-					<li data-bind="css: {active: level() == 12}" data-amt="125000" data-lvl="12">$125,000</li>
-					<li data-bind="css: {active: level() == 11}" data-amt="64000" data-lvl="11">$64,000</li>
-					<li data-bind="css: {active: level() == 10}" data-amt="32000" data-lvl="10">$32,000</li>
-					<li data-bind="css: {active: level() == 9}" data-amt="16000" data-lvl="9">$16,000</li>
-					<li data-bind="css: {active: level() == 8}" data-amt="8000" data-lvl="8">$8,000</li>
-					<li data-bind="css: {active: level() == 7}" data-amt="4000" data-lvl="7">$4,000</li>
-					<li data-bind="css: {active: level() == 6}" data-amt="2000" data-lvl="6">$2,000</li>
-					<li data-bind="css: {active: level() == 5}" data-amt="1000" data-lvl="5">$1,000</li>
-					<li data-bind="css: {active: level() == 4}" data-amt="500" data-lvl="4">$500</li>
-					<li data-bind="css: {active: level() == 3}" data-amt="300" data-lvl="3">$300</li>
-					<li data-bind="css: {active: level() == 2}" data-amt="200" data-lvl="2">$200</li>
-					<li data-bind="css: {active: level() == 1}" data-amt="100" data-lvl="1">$100</li>
+					<li data-bind="css: {active: level() == 15}" data-amt="1000000" data-lvl="15">1.000.000 &euro;</li>
+					<li data-bind="css: {active: level() == 14}" data-amt="500000" data-lvl="14">500.000 &euro;</li>
+					<li data-bind="css: {active: level() == 13}" data-amt="125000" data-lvl="13">125.000 &euro;</li>
+					<li data-bind="css: {active: level() == 12}" data-amt="64000" data-lvl="12">64.000 &euro;</li>
+					<li data-bind="css: {active: level() == 11}" data-amt="32000" data-lvl="11">32.000 &euro;</li>
+					<li data-bind="css: {active: level() == 10}" data-amt="16000" data-lvl="10" class="safehaven">16.000 &euro;</li>
+					<li data-bind="css: {active: level() == 9}" data-amt="8000" data-lvl="9">8.000 &euro;</li>
+					<li data-bind="css: {active: level() == 8}" data-amt="4000" data-lvl="8">4.000 &euro;</li>
+					<li data-bind="css: {active: level() == 7}" data-amt="2000" data-lvl="7">2.000 &euro;</li>
+					<li data-bind="css: {active: level() == 6}" data-amt="1000" data-lvl="6">1.000 &euro;</li>
+					<li data-bind="css: {active: level() == 5}" data-amt="500" data-lvl="5" class="safehaven">500 &euro;</li>
+					<li data-bind="css: {active: level() == 4}" data-amt="300" data-lvl="4">300 &euro;</li>
+					<li data-bind="css: {active: level() == 3}" data-amt="200" data-lvl="3">200 &euro;</li>
+					<li data-bind="css: {active: level() == 2}" data-amt="100" data-lvl="2">100 &euro;</li>
+					<li data-bind="css: {active: level() == 1}" data-amt="50" data-lvl="1">50 &euro;</li>
 				</ul>
 				<div class="clear"></div>
 			</div>
@@ -56,10 +59,10 @@ Author: Aaron Nech
 				<div id="fifty" class="options-button" data-bind="click: fifty"></div>
 				<div id="phone-friend" class="options-button" data-bind="click: fadeOutOption"></div>
 				<div id="audience" class="options-button" data-bind="click: fadeOutOption"></div>
-				<div id="money">$<span data-bind="text: formatMoney()"></span></div>
+				<div id="money"><span data-bind="text: formatMoney()"></span> &euro;</div>
 			</div>
 			<div id="question-box">
-				<span class="big-text">Q:</span>
+				<span class="big-text">F:</span>
 				<span class="content" data-bind="text: getQuestionText()"></span>
 			</div>
 			<div id="answer-box">
