@@ -132,7 +132,7 @@ var MillionaireModel = function(data) {
 	 				});
  				} else {
  					self.level(self.level() + 1);
- 					$("#" + elm).css('background', 'none');
+ 					$("#" + elm).css('background', '');
 			 		$("#answer-one").show();
 			 		$("#answer-two").show();
 			 		$("#answer-three").show();

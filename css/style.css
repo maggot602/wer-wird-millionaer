@@ -24,27 +24,60 @@ audio {
 #levels {
 	float: right;
 	list-style: none;
-	margin: 0;
-	padding: 0;
-	color: white;
+	margin: 40px 0 0;
+	padding: 14px 20px;
+	color: #f0c24c;
 	text-align: right;
-	margin-top: 40px;
-	font-size: 1.3em;
+	font-size: 1.1em;
+	background: linear-gradient(180deg, #0f2d61 0%, #051532 100%);
+	border: 2px solid #4f8fd1;
+	border-radius: 10px;
+	box-shadow: 0 0 12px rgba(60, 130, 220, 0.5) inset;
+}
+
+#levels li {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 3px 8px;
+	border-radius: 4px;
+}
+
+#levels li .lvl-num {
+	color: #fff;
+	font-weight: 700;
+	width: 1.6em;
+	text-align: left;
+}
+
+#levels li .lvl-diamond {
+	color: #f0c24c;
+	width: 1.4em;
+	text-align: center;
+	opacity: 0;
+}
+
+#levels li.reached .lvl-diamond {
+	opacity: 1;
+}
+
+#levels li .lvl-amt {
+	min-width: 7.5em;
+}
+
+.safehaven .lvl-amt {
+	color: #ffd966;
+	font-weight: 800;
 }
 
 .active {
-	color: green;
-	font-weight: bold;
-	text-decoration: underline;
+	background: linear-gradient(90deg, #ff8c1a, #ffb347);
 }
 
-.safehaven {
-	color: #FF7E00;
-	font-weight: bold;
-}
-
-.safehaven.active {
-	color: green;
+.active .lvl-num,
+.active .lvl-diamond,
+.active .lvl-amt {
+	color: #1a1a1a !important;
 }
 
 #options {
@@ -54,17 +87,22 @@ audio {
 }
 
 #question-box {
-	background: #ddd;
+	background: linear-gradient(180deg, #16428a 0%, #081d42 100%);
+	border: 2px solid #5ea1e6;
+	clip-path: path("M 27.03 4.45 A 10.00 10.00 0 0 1 35.35 0.00 L 924.65 0.00 A 10.00 10.00 0 0 1 932.97 4.45 L 957.04 40.56 A 8.00 8.00 0 0 1 957.04 49.44 L 932.97 85.55 A 10.00 10.00 0 0 1 924.65 90.00 L 35.35 90.00 A 10.00 10.00 0 0 1 27.03 85.55 L 2.96 49.44 A 8.00 8.00 0 0 1 2.96 40.56 Z");
 	width: 960px;
-	margin: 0 auto;
-	padding: 10px;
-	font-size: 1.5em;
-}
-
-.big-text {
-	color: #FF7E00;
-	font-size: 2em;
-	margin-right: 15px;
+	height: 90px;
+	box-sizing: border-box;
+	margin: 24px auto;
+	padding: 0 90px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.4em;
+	color: #fff;
+	font-weight: 600;
+	text-align: center;
+	box-shadow: 0 0 16px rgba(94, 161, 230, 0.6) inset;
 }
 
 #money {
@@ -95,24 +133,28 @@ audio {
 	text-align: center;
 }
 
-#fifty {
-	background: url('../img/50-50.png') no-repeat 0 0;
-}
-
-#phone-friend {
-	background: url('../img/phone-friend.png') no-repeat 0 0;
-}
-
-#audience {
-	background: url('../img/audience.png') no-repeat 0 0;
-}
-
 #answer-box {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px 32px;
 	color: white;
-	font-size: 1.3em;
+	font-size: 1.2em;
 	text-align: left;
 	width: 960px;
-	margin: 0 auto;
+	margin: 24px auto 0;
+}
+
+.answer {
+	background: linear-gradient(180deg, #16428a 0%, #081d42 100%);
+	border: 2px solid #5ea1e6;
+	clip-path: path("M 19.02 4.33 A 10.00 10.00 0 0 1 27.26 0.00 L 436.74 0.00 A 10.00 10.00 0 0 1 444.98 4.33 L 460.88 27.47 A 8.00 8.00 0 0 1 460.88 36.53 L 444.98 59.67 A 10.00 10.00 0 0 1 436.74 64.00 L 27.26 64.00 A 10.00 10.00 0 0 1 19.02 59.67 L 3.12 36.53 A 8.00 8.00 0 0 1 3.12 27.47 Z");
+	width: 464px;
+	height: 64px;
+	box-sizing: border-box;
+	padding: 0 40px;
+	display: flex;
+	align-items: center;
+	box-shadow: 0 0 10px rgba(94, 161, 230, 0.5) inset;
 }
 
 #pre-start {
@@ -120,8 +162,14 @@ audio {
 }
 
 .answer:hover {
-	text-decoration: underline;
 	cursor: pointer;
+	background: linear-gradient(180deg, #1f5bb0 0%, #0c285c 100%);
+}
+
+.answer-letter {
+	color: #ffae42;
+	font-weight: 700;
+	margin-right: 10px;
 }
 
 .options-button {
@@ -129,10 +177,33 @@ audio {
 	height: 64px;
 	margin-left: 12px;
 	float: left;
-	background-position: 0 0;
 	cursor: pointer;
 }
 
-.options-button:hover {
-	background-position: 0 -64px !important;
+.options-button svg {
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.joker-badge {
+	fill: #0c2e63;
+	stroke: #5ea1e6;
+	stroke-width: 5;
+}
+
+.options-button:hover .joker-badge {
+	fill: #1f5bb0;
+}
+
+.joker-text {
+	fill: #fff;
+	font-size: 20px;
+	font-weight: 700;
+	font-family: 'Roboto Slab', serif;
+	text-anchor: middle;
+}
+
+.joker-icon {
+	fill: #fff;
 }

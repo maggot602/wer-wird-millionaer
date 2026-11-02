@@ -37,46 +37,69 @@ Author: Aaron Nech
 			<div id="top">
 				<img src="img/logo.png" id="logo" />
 				<ul id="levels">
-					<li data-bind="css: {active: level() == 15}" data-amt="1000000" data-lvl="15">1.000.000 &euro;</li>
-					<li data-bind="css: {active: level() == 14}" data-amt="500000" data-lvl="14">500.000 &euro;</li>
-					<li data-bind="css: {active: level() == 13}" data-amt="125000" data-lvl="13">125.000 &euro;</li>
-					<li data-bind="css: {active: level() == 12}" data-amt="64000" data-lvl="12">64.000 &euro;</li>
-					<li data-bind="css: {active: level() == 11}" data-amt="32000" data-lvl="11">32.000 &euro;</li>
-					<li data-bind="css: {active: level() == 10}" data-amt="16000" data-lvl="10" class="safehaven">16.000 &euro;</li>
-					<li data-bind="css: {active: level() == 9}" data-amt="8000" data-lvl="9">8.000 &euro;</li>
-					<li data-bind="css: {active: level() == 8}" data-amt="4000" data-lvl="8">4.000 &euro;</li>
-					<li data-bind="css: {active: level() == 7}" data-amt="2000" data-lvl="7">2.000 &euro;</li>
-					<li data-bind="css: {active: level() == 6}" data-amt="1000" data-lvl="6">1.000 &euro;</li>
-					<li data-bind="css: {active: level() == 5}" data-amt="500" data-lvl="5" class="safehaven">500 &euro;</li>
-					<li data-bind="css: {active: level() == 4}" data-amt="300" data-lvl="4">300 &euro;</li>
-					<li data-bind="css: {active: level() == 3}" data-amt="200" data-lvl="3">200 &euro;</li>
-					<li data-bind="css: {active: level() == 2}" data-amt="100" data-lvl="2">100 &euro;</li>
-					<li data-bind="css: {active: level() == 1}" data-amt="50" data-lvl="1">50 &euro;</li>
+					<li data-bind="css: {active: level() == 15, reached: level() >= 15}" data-amt="1000000" data-lvl="15"><span class="lvl-num">15</span><span class="lvl-diamond">&#9670;</span><span class="lvl-amt">1.000.000 &euro;</span></li>
+					<li data-bind="css: {active: level() == 14, reached: level() >= 14}" data-amt="500000" data-lvl="14"><span class="lvl-num">14</span><span class="lvl-diamond">&#9670;</span><span class="lvl-amt">500.000 &euro;</span></li>
+					<li data-bind="css: {active: level() == 13, reached: level() >= 13}" data-amt="125000" data-lvl="13"><span class="lvl-num">13</span><span class="lvl-diamond">&#9670;</span><span class="lvl-amt">125.000 &euro;</span></li>
+					<li data-bind="css: {active: level() == 12, reached: level() >= 12}" data-amt="64000" data-lvl="12"><span class="lvl-num">12</span><span class="lvl-diamond">&#9670;</span><span class="lvl-amt">64.000 &euro;</span></li>
+					<li data-bind="css: {active: level() == 11, reached: level() >= 11}" data-amt="32000" data-lvl="11"><span class="lvl-num">11</span><span class="lvl-diamond">&#9670;</span><span class="lvl-amt">32.000 &euro;</span></li>
+					<li data-bind="css: {active: level() == 10, reached: level() >= 10}" data-amt="16000" data-lvl="10" class="safehaven"><span class="lvl-num">10</span><span class="lvl-diamond">&#9670;</span><span class="lvl-amt">16.000 &euro;</span></li>
+					<li data-bind="css: {active: level() == 9, reached: level() >= 9}" data-amt="8000" data-lvl="9"><span class="lvl-num">9</span><span class="lvl-diamond">&#9670;</span><span class="lvl-amt">8.000 &euro;</span></li>
+					<li data-bind="css: {active: level() == 8, reached: level() >= 8}" data-amt="4000" data-lvl="8"><span class="lvl-num">8</span><span class="lvl-diamond">&#9670;</span><span class="lvl-amt">4.000 &euro;</span></li>
+					<li data-bind="css: {active: level() == 7, reached: level() >= 7}" data-amt="2000" data-lvl="7"><span class="lvl-num">7</span><span class="lvl-diamond">&#9670;</span><span class="lvl-amt">2.000 &euro;</span></li>
+					<li data-bind="css: {active: level() == 6, reached: level() >= 6}" data-amt="1000" data-lvl="6"><span class="lvl-num">6</span><span class="lvl-diamond">&#9670;</span><span class="lvl-amt">1.000 &euro;</span></li>
+					<li data-bind="css: {active: level() == 5, reached: level() >= 5}" data-amt="500" data-lvl="5" class="safehaven"><span class="lvl-num">5</span><span class="lvl-diamond">&#9670;</span><span class="lvl-amt">500 &euro;</span></li>
+					<li data-bind="css: {active: level() == 4, reached: level() >= 4}" data-amt="300" data-lvl="4"><span class="lvl-num">4</span><span class="lvl-diamond">&#9670;</span><span class="lvl-amt">300 &euro;</span></li>
+					<li data-bind="css: {active: level() == 3, reached: level() >= 3}" data-amt="200" data-lvl="3"><span class="lvl-num">3</span><span class="lvl-diamond">&#9670;</span><span class="lvl-amt">200 &euro;</span></li>
+					<li data-bind="css: {active: level() == 2, reached: level() >= 2}" data-amt="100" data-lvl="2"><span class="lvl-num">2</span><span class="lvl-diamond">&#9670;</span><span class="lvl-amt">100 &euro;</span></li>
+					<li data-bind="css: {active: level() == 1, reached: level() >= 1}" data-amt="50" data-lvl="1"><span class="lvl-num">1</span><span class="lvl-diamond">&#9670;</span><span class="lvl-amt">50 &euro;</span></li>
 				</ul>
 				<div class="clear"></div>
 			</div>
 			<div id="options">
-				<div id="fifty" class="options-button" data-bind="click: fifty"></div>
-				<div id="phone-friend" class="options-button" data-bind="click: fadeOutOption"></div>
-				<div id="audience" class="options-button" data-bind="click: fadeOutOption"></div>
+				<div id="fifty" class="options-button" data-bind="click: fifty">
+					<svg viewBox="0 0 100 100">
+						<circle class="joker-badge" cx="50" cy="50" r="44" />
+						<text x="50" y="58" class="joker-text">50:50</text>
+					</svg>
+				</div>
+				<div id="phone-friend" class="options-button" data-bind="click: fadeOutOption">
+					<svg viewBox="0 0 100 100">
+						<circle class="joker-badge" cx="50" cy="50" r="44" />
+						<g class="joker-icon" transform="rotate(-40 50 50)">
+							<rect x="40" y="24" width="20" height="52" rx="10" />
+							<circle cx="50" cy="30" r="9" />
+							<circle cx="50" cy="70" r="9" />
+						</g>
+					</svg>
+				</div>
+				<div id="audience" class="options-button" data-bind="click: fadeOutOption">
+					<svg viewBox="0 0 100 100">
+						<circle class="joker-badge" cx="50" cy="50" r="44" />
+						<g class="joker-icon">
+							<circle cx="36" cy="40" r="9" />
+							<path d="M20 74c0-12 8-20 16-20s16 8 16 20z" />
+							<circle cx="64" cy="40" r="9" />
+							<path d="M48 74c0-12 8-20 16-20s16 8 16 20z" />
+						</g>
+					</svg>
+				</div>
 				<div id="money"><span data-bind="text: formatMoney()"></span> &euro;</div>
 			</div>
 			<div id="question-box">
-				<span class="big-text">F:</span>
 				<span class="content" data-bind="text: getQuestionText()"></span>
 			</div>
 			<div id="answer-box">
 				<div id="answer-one" class="answer" data-bind="click: function() { answerQuestion(0, $element.id) }">
-					<span class="big-text">A.</span><span data-bind="text: getAnswerText(0)"></span>
+					<span class="answer-letter">A:</span><span data-bind="text: getAnswerText(0)"></span>
 				</div>
 				<div id="answer-two" class="answer" data-bind="click: function() { answerQuestion(1, $element.id) }">
-					<span class="big-text">B.</span><span data-bind="text: getAnswerText(1)"></span>
+					<span class="answer-letter">B:</span><span data-bind="text: getAnswerText(1)"></span>
 				</div>
 				<div id="answer-three" class="answer" data-bind="click: function() { answerQuestion(2, $element.id) }">
-					<span class="big-text">C.</span><span data-bind="text: getAnswerText(2)"></span>
+					<span class="answer-letter">C:</span><span data-bind="text: getAnswerText(2)"></span>
 				</div>
 				<div id="answer-four" class="answer" data-bind="click: function() { answerQuestion(3, $element.id) }">
-					<span class="big-text">D.</span><span data-bind="text: getAnswerText(3)"></span>
+					<span class="answer-letter">D:</span><span data-bind="text: getAnswerText(3)"></span>
 				</div>
 			</div>
 		</div>
