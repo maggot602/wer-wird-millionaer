@@ -312,156 +312,157 @@
 		{
 			"questions": [
 				{
-					"question": "An albino gorilla usually has what color fur?",
+					"question": "Was hat sie studiert?",
 					"content": [
-						"Brown",
-						"Black",
-						"White",
-						"Golden"
-					],
-					"correct": 2
-				},
-				{
-					"question": "When you enter a situation without a definite plan of action, you are said to be \"playing it by\" what?",
-					"content": [
-						"Fingertips",
-						"Ear",
-						"Nose",
-						"Mouth"
-					],
-					"correct": 1
-				},
-				{
-					"question": "What is commonly known as the \"Emerald City\" in the United States?",
-					"content": [
-						"Palos Verdes, CA",
-						"Seattle, WA",
-						"New York, NY",
-						"Dallas, TX"
-					],
-					"correct": 1
-				},
-				{
-					"question": "What is the national emblem of Canada?",
-					"content": [
-						"Maple Leaf",
-						"Brown Bear",
-						"Maple Syrup",
-						"Waffle"
+						"Industriedesign",
+						"Modedesign",
+						"Architektur",
+						"Innenarchitektur"
 					],
 					"correct": 0
 				},
 				{
-					"question": "What is the name of the largest freshwater lake in the world?",
+					"question": "Welchen ungewöhnlichen Führerschein besitzt sie?",
 					"content": [
-						"Lake Union",
-						"Lake Superior",
-						"Lake Largest",
-						"Lake Goodwin"
+						"Motorradführerschein",
+						"LKW-Führerschein",
+						"Bootsführerschein",
+						"Pilotenschein"
 					],
 					"correct": 0
 				},
 				{
-					"correct": 2,
+					"question": "Wohin reist sie am liebsten?",
 					"content": [
-						"Birds",
-						"Cell formation",
-						"Relation between organisms and their environment",
-						"Tissues"
+						"Skandinavien (Schweden, Norwegen)",
+						"Südostasien",
+						"Südamerika",
+						"Die Karibik"
 					],
-					"question": "Ecology deals with"
+					"correct": 0
 				},
 				{
-					"correct": 0,
+					"question": "Welches Hobby hat sie vor Kurzem ganz neu für sich entdeckt?",
 					"content": [
-						"Earth's gravitational pull",
-						"Moon's gravitational pull",
-						"Centripetal force due to the earth's rotation",
-						"Pressure of the atmosphere"
+						"Line-Dance",
+						"Zumba",
+						"Standardtanz",
+						"Salsa"
 					],
-					"question": "The escape velocity of a rocket fired from the earth towards the moon is the velocity required to overcome"
+					"correct": 0
 				},
 				{
-					"correct": 3,
+					"question": "Welches bayerische Kartenspiel spielt sie neuerdings leidenschaftlich?",
 					"content": [
-						"was a great Italian painter, sculptor and architect",
-						"got universal fame form his masterpiece \"Mona lisa\"",
-						"drew models of organs such as the heart, lungs and womb",
-						"All of the above"
+						"Schafkopf",
+						"Skat",
+						"Doppelkopf",
+						"Rommé"
 					],
-					"question": "Leonardo da Vinci"
+					"correct": 0
 				},
 				{
-					"correct": 2,
+					"question": "Was isst sie auf gar keinen Fall zum Frühstück?",
 					"content": [
-						"2000",
-						"2001",
-						"2002",
-						"2003"
+						"Honig",
+						"Marmelade",
+						"Nutella",
+						"Käse"
 					],
-					"question": "Hamid Karzai was chosen president of Afghanistan in"
+					"correct": 0
 				},
 				{
-					"correct": 0,
+					"question": "Wie oft ist sie in ihrem Leben schon umgezogen?",
 					"content": [
-						"New York, USA",
-						"Haque (Netherlands)",
-						"Geneva",
-						"Paris"
+						"8-mal",
+						"3-mal",
+						"5-mal",
+						"12-mal"
 					],
-					"question": "The headquarters of UN are situated at"
+					"correct": 0
 				},
 				{
-					"correct": 2,
+					"question": "Wo war ihre erste gemeinsame Wohnung mit ihrem Mann?",
 					"content": [
-						"friction between the earth and the bus",
-						"friction between the passengers and the earth",
-						"inertia of the passengers",
-						"inertia of the bus"
+						"Hamburg-St. Pauli",
+						"Hamburg-Altona",
+						"München-Schwabing",
+						"Berlin-Kreuzberg"
 					],
-					"question": "When a moving bus stops suddenly, the passenger are pushed forward because of the"
+					"correct": 0
 				},
 				{
-					"correct": 1,
+					"question": "In welcher Stadt eröffnete sie ihre erste eigene Naturheilpraxis?",
 					"content": [
-						"1908 at London",
-						"1980 at Moscow",
-						"1936 at Berlin",
-						"1924 at Paris"
+						"Bobingen",
+						"Augsburg",
+						"Friedberg",
+						"Landsberg am Lech"
 					],
-					"question": "When and where was hockey introduced for women in Olympics?"
+					"correct": 0
 				},
 				{
-					"correct": 0,
+					"question": "Was passiert ihr beim Essen immer wieder, zur Belustigung aller?",
 					"content": [
-						"increase the alkalinity of the soil",
-						"increase the acidity of the soil",
-						"restore nitrates to the soil",
-						"make the soil more porous"
+						"Sie lässt ihre Serviette fallen",
+						"Sie verschüttet ihr Getränk",
+						"Sie verwechselt Messer und Gabel",
+						"Sie lacht sich an ihrem Essen"
 					],
-					"question": "Lime is sometimes applied to soil in order to"
+					"correct": 0
 				},
 				{
-					"correct": 1,
+					"question": "Wie hieß ihr erster Hund, ein Collie?",
 					"content": [
-						"discovered Greenland",
-						"travelled through China, India and other parts of Asia",
-						"travelled round the cape of Good Hope",
-						"discovered Canada"
+						"Nico",
+						"Rex",
+						"Bruno",
+						"Balu"
 					],
-					"question": "Marco Polo"
+					"correct": 0
 				},
 				{
-					"correct": 1,
+					"question": "Was war ihr erstes Auto?",
 					"content": [
-						"Guruji",
-						"Man of Peace",
-						"Punjab Kesari",
-						"Mahamana"
+						"VW 1500 Ponton",
+						"VW Käfer",
+						"Opel Kadett",
+						"Ford Taunus"
 					],
-					"question": "Lal Bahadur Shastri is also known as"
+					"correct": 0
+				},
+				{
+					"question": "Welches sportliche Großereignis begann nur einen Tag nach ihrer Geburt, am 22. November 1956?",
+					"content": [
+						"Die Eröffnungsfeier der Olympischen Sommerspiele in Melbourne",
+						"Die Eröffnungsfeier der Olympischen Spiele in Rom",
+						"Die Fußball-Weltmeisterschaft in Schweden",
+						"Die Eröffnungsfeier der Olympischen Spiele in Tokio"
+					],
+					"correct": 0
+				},
+				{
+					"question": "[Platzhalter - bitte noch eine sehr persönliche/geheime Frage ergänzen]",
+					"content": [
+						"Antwort A",
+						"Antwort B",
+						"Antwort C",
+						"Antwort D"
+					],
+					"correct": 0
+				},
+				{
+					"question": "[Platzhalter - bitte noch eine sehr persönliche/geheime Frage ergänzen]",
+					"content": [
+						"Antwort A",
+						"Antwort B",
+						"Antwort C",
+						"Antwort D"
+					],
+					"correct": 0
 				}
-			]
+			],
+			"name": "Persönliches Jubiläumsquiz"
 		},
 		{
 			"questions": [
