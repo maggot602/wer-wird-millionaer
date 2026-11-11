@@ -45,8 +45,25 @@ startSound = function(id, loop) {
 var MillionaireModel = function(data) {
 	var self = this;
 
+	// Shuffles the 4 answer choices of a question so the correct
+	// one doesn't always end up in the same position (eg. always A)
+	shuffleAnswers = function(question) {
+		var order = [0, 1, 2, 3];
+		for (var i = order.length - 1; i > 0; i--) {
+			var j = Math.floor(Math.random() * (i + 1));
+			var tmp = order[i];
+			order[i] = order[j];
+			order[j] = tmp;
+		}
+		return {
+			question: question.question,
+			content: order.map(function(i) { return question.content[i]; }),
+			correct: order.indexOf(question.correct)
+		};
+	}
+
 	// The 15 questions of this game
-    this.questions = data.questions;
+    this.questions = data.questions.map(shuffleAnswers);
 
     // A flag to keep multiple selections
     // out while transitioning levels
