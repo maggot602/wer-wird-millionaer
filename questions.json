@@ -312,57 +312,7 @@
 		{
 			"questions": [
 				{
-					"question": "Was hat sie studiert?",
-					"content": [
-						"Industriedesign",
-						"Modedesign",
-						"Architektur",
-						"Innenarchitektur"
-					],
-					"correct": 0
-				},
-				{
-					"question": "Welchen ungewöhnlichen Führerschein besitzt sie?",
-					"content": [
-						"Motorradführerschein",
-						"LKW-Führerschein",
-						"Bootsführerschein",
-						"Pilotenschein"
-					],
-					"correct": 0
-				},
-				{
-					"question": "Wohin reist sie am liebsten?",
-					"content": [
-						"Skandinavien (Schweden, Norwegen)",
-						"Südostasien",
-						"Südamerika",
-						"Die Karibik"
-					],
-					"correct": 0
-				},
-				{
-					"question": "Welches Hobby hat sie vor Kurzem ganz neu für sich entdeckt?",
-					"content": [
-						"Line-Dance",
-						"Zumba",
-						"Standardtanz",
-						"Salsa"
-					],
-					"correct": 0
-				},
-				{
-					"question": "Welches bayerische Kartenspiel spielt sie neuerdings leidenschaftlich?",
-					"content": [
-						"Schafkopf",
-						"Skat",
-						"Doppelkopf",
-						"Rommé"
-					],
-					"correct": 0
-				},
-				{
-					"question": "Was isst sie auf gar keinen Fall zum Frühstück?",
+					"question": "Was isst Heike auf gar keinen Fall zum Frühstück?",
 					"content": [
 						"Honig",
 						"Marmelade",
@@ -372,57 +322,17 @@
 					"correct": 0
 				},
 				{
-					"question": "Wie oft ist sie in ihrem Leben schon umgezogen?",
+					"question": "Welchen ungewöhnlichen Führerschein besitzt Heike?",
 					"content": [
-						"8-mal",
-						"3-mal",
-						"5-mal",
-						"12-mal"
+						"Motorradführerschein",
+						"LKW-Führerschein",
+						"Bootsführerschein",
+						"Pilotenschein"
 					],
 					"correct": 0
 				},
 				{
-					"question": "Wo war ihre erste gemeinsame Wohnung mit ihrem Mann?",
-					"content": [
-						"Hamburg-St. Pauli",
-						"Hamburg-Altona",
-						"München-Schwabing",
-						"Berlin-Kreuzberg"
-					],
-					"correct": 0
-				},
-				{
-					"question": "In welcher Stadt eröffnete sie ihre erste eigene Naturheilpraxis?",
-					"content": [
-						"Bobingen",
-						"Augsburg",
-						"Friedberg",
-						"Landsberg am Lech"
-					],
-					"correct": 0
-				},
-				{
-					"question": "Was passiert ihr beim Essen immer wieder, zur Belustigung aller?",
-					"content": [
-						"Sie lässt ihre Serviette fallen",
-						"Sie verschüttet ihr Getränk",
-						"Sie verwechselt Messer und Gabel",
-						"Sie lacht sich an ihrem Essen"
-					],
-					"correct": 0
-				},
-				{
-					"question": "Wie hieß ihr erster Hund, ein Collie?",
-					"content": [
-						"Nico",
-						"Rex",
-						"Bruno",
-						"Balu"
-					],
-					"correct": 0
-				},
-				{
-					"question": "Was war ihr erstes Auto?",
+					"question": "Was war Heikes erstes Auto?",
 					"content": [
 						"VW 1500 Ponton",
 						"VW Käfer",
@@ -432,34 +342,124 @@
 					"correct": 0
 				},
 				{
-					"question": "Welches sportliche Großereignis begann nur einen Tag nach ihrer Geburt, am 22. November 1956?",
+					"question": "Wie hieß Heikes erster Hund, ein Collie?",
+					"content": [
+						"Nico",
+						"Rex",
+						"Bruno",
+						"Balu"
+					],
+					"correct": 0
+				},
+				{
+					"question": "Wo war Heikes erste gemeinsame Wohnung mit ihrem Mann?",
+					"content": [
+						"Hamburg-St. Pauli",
+						"Hamburg-Altona",
+						"Berlin-Charlottenburg",
+						"Berlin-Kreuzberg"
+					],
+					"correct": 0
+				},
+				{
+					"question": "Wohin reist Heike am liebsten?",
+					"content": [
+						"Skandinavien (Schweden, Norwegen)",
+						"Südostasien",
+						"Südamerika",
+						"Die Karibik"
+					],
+					"correct": 0
+				},
+				{
+					"question": "Welches Kartenspiel spielt Heike neuerdings leidenschaftlich?",
+					"content": [
+						"Schafkopf",
+						"Skat",
+						"Doppelkopf",
+						"Rommé"
+					],
+					"correct": 0
+				},
+				{
+					"question": "Was war einer der schönsten Momente in Heikes bisherigen 70 Lebensjahren?",
+					"content": [
+						"Heikes Hochzeit",
+						"Die Geburt ihrer Kinder",
+						"Die Geburt ihrer Enkelkinder",
+						"Als Norbert nach dem Kroatienurlaub sein zu kleines Wohnmobil kurzerhand verkauft hat"
+					],
+					"correct": 3
+				},
+				{
+					"question": "Welches Hobby hat Heike vor Kurzem ganz neu für sich entdeckt?",
+					"content": [
+						"Line-Dance",
+						"Zumba",
+						"Standardtanz",
+						"Salsa"
+					],
+					"correct": 0
+				},
+				{
+					"question": "Wenn Heike eine Sache an ihrem Ehemann ändern könnte, würde sie …",
+					"content": [
+						"sich wünschen, dass er den Kochlöffel schwingt",
+						"ihm die Werkzeuge wegnehmen, bevor er wieder etwas „repariert“",
+						"sich wünschen, dass er mal von selbst eine Massage anbietet",
+						"sich wünschen, dass er bei 180 km/h Abstand nicht mit einer Parklücke verwechselt"
+					],
+					"correct": 3
+				},
+				{
+					"question": "Wie oft ist Heike in ihrem Leben schon umgezogen?",
+					"content": [
+						"8-mal",
+						"3-mal",
+						"5-mal",
+						"12-mal"
+					],
+					"correct": 0
+				},
+				{
+					"question": "Norbert öffnet sich abends zum Essen eine Flasche Bier. Was passiert?",
+					"content": [
+						"Er trinkt es ganz in Ruhe und genüsslich",
+						"Er teilt es freiwillig mit Heike",
+						"Heike holt ihm wortlos ein Glas, ganz die vorbildliche Ehefrau",
+						"Heike trinkt heimlich die ganze Flasche leer und behauptet danach, nur genippt zu haben"
+					],
+					"correct": 3
+				},
+				{
+					"question": "Welches sportliche Großereignis begann nur einen Tag nach Heikes Geburt, am 22. November 1956?",
 					"content": [
 						"Die Eröffnungsfeier der Olympischen Sommerspiele in Melbourne",
-						"Die Eröffnungsfeier der Olympischen Spiele in Rom",
-						"Die Fußball-Weltmeisterschaft in Schweden",
-						"Die Eröffnungsfeier der Olympischen Spiele in Tokio"
+						"Die Eröffnungsfeier der Olympischen Winterspiele in Cortina d'Ampezzo",
+						"Das erste Formel-1-Rennen der Geschichte",
+						"Die Gründung der Fußball-Bundesliga"
 					],
 					"correct": 0
 				},
 				{
-					"question": "[Platzhalter - bitte noch eine sehr persönliche/geheime Frage ergänzen]",
+					"question": "Heike hat exakt denselben Geburtstag wie eine echte Hollywood-Schauspielerin. In welchem Kultfilm hätte Heike demnach mitspielen können?",
 					"content": [
-						"Antwort A",
-						"Antwort B",
-						"Antwort C",
-						"Antwort D"
+						"Dirty Dancing",
+						"Footloose",
+						"Grease",
+						"Saturday Night Fever"
 					],
 					"correct": 0
 				},
 				{
-					"question": "[Platzhalter - bitte noch eine sehr persönliche/geheime Frage ergänzen]",
+					"question": "Bei der Hengstparade in Moritzburg – dem Gestüt, das fast genauso heißt wie Heikes Sohn Moritz – bildet eine ganz bestimmte Reiter-Vorführung den großen Abschluss. Wie heißt sie?",
 					"content": [
-						"Antwort A",
-						"Antwort B",
-						"Antwort C",
-						"Antwort D"
+						"Military",
+						"Voltigier-Kür",
+						"Fahrturnier",
+						"Dressurquadrille"
 					],
-					"correct": 0
+					"correct": 3
 				}
 			],
 			"name": "Persönliches Jubiläumsquiz"
