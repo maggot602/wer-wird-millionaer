@@ -82,7 +82,7 @@ audio {
 
 #options {
 	width: 960px;
-	height: 70px;
+	height: 56px;
 	margin: 0 auto;
 }
 
@@ -184,6 +184,44 @@ audio {
 
 #pre-start {
 	display: none;
+	text-align: center;
+	padding-top: 10vh;
+}
+
+#start-logo {
+	width: 340px;
+	display: block;
+	margin: 0 auto 50px;
+}
+
+#problem-set {
+	font-family: 'Roboto Slab', serif;
+	font-size: 1.5em;
+	color: #fff;
+	background: linear-gradient(180deg, #16428a 0%, #081d42 100%);
+	border: 2px solid #5ea1e6;
+	border-radius: 10px;
+	padding: 14px 22px;
+	cursor: pointer;
+	box-shadow: 0 0 12px rgba(94, 161, 230, 0.5);
+}
+
+#start {
+	font-family: 'Roboto Slab', serif;
+	font-size: 1.5em;
+	font-weight: 700;
+	color: #1a1a1a;
+	background: linear-gradient(180deg, #ffb347 0%, #ff8c1a 100%);
+	border: 2px solid #ffd27f;
+	border-radius: 10px;
+	padding: 14px 36px;
+	margin-left: 20px;
+	cursor: pointer;
+	box-shadow: 0 0 14px rgba(255, 140, 26, 0.55);
+}
+
+#start:hover {
+	background: linear-gradient(180deg, #ffc46b 0%, #ff9c38 100%);
 }
 
 .answer:hover {
@@ -198,37 +236,19 @@ audio {
 }
 
 .options-button {
-	width: 64px;
-	height: 64px;
+	height: 48px;
 	margin-left: 12px;
 	float: left;
 	cursor: pointer;
+	transition: transform 0.15s, filter 0.15s;
 }
 
-.options-button svg {
-	width: 100%;
+.options-button img {
 	height: 100%;
 	pointer-events: none;
 }
 
-.joker-badge {
-	fill: #0c2e63;
-	stroke: #5ea1e6;
-	stroke-width: 5;
-}
-
-.options-button:hover .joker-badge {
-	fill: #1f5bb0;
-}
-
-.joker-text {
-	fill: #fff;
-	font-size: 20px;
-	font-weight: 700;
-	font-family: 'Roboto Slab', serif;
-	text-anchor: middle;
-}
-
-.joker-icon {
-	fill: #fff;
+.options-button:hover {
+	transform: scale(1.08);
+	filter: brightness(1.25);
 }

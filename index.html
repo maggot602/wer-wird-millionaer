@@ -12,7 +12,7 @@ Author: Aaron Nech
 		<meta charset="utf-8" />
 		<title>Wer wird Millionär</title>
 		<link href="http://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css?v=3" />
 	</head>
 	<body>
 		<!-- HTML5 Audio tags - weakly supported, works in Chrome(tested) -->
@@ -22,10 +22,12 @@ Author: Aaron Nech
 
 		<!-- Before the game begins problem set selection -->
 		<div id="pre-start">
-			<label for="problem-set">Spiel:</label>
-			<select id="problem-set">
-			</select>
-			<button id="start">Starten!</button>
+			<img src="img/logo.png" id="start-logo" />
+			<div id="start-controls">
+				<select id="problem-set">
+				</select>
+				<button id="start">Starten!</button>
+			</div>
 		</div>
 
 		<!-- Shown when the player wins/loses -->
@@ -57,31 +59,16 @@ Author: Aaron Nech
 			</div>
 			<div id="options">
 				<div id="fifty" class="options-button" data-bind="click: fifty">
-					<svg viewBox="0 0 100 100">
-						<circle class="joker-badge" cx="50" cy="50" r="44" />
-						<text x="50" y="58" class="joker-text">50:50</text>
-					</svg>
+					<img src="img/joker-5050.png" alt="50:50" />
 				</div>
 				<div id="phone-friend" class="options-button" data-bind="click: fadeOutOption">
-					<svg viewBox="0 0 100 100">
-						<circle class="joker-badge" cx="50" cy="50" r="44" />
-						<g class="joker-icon" transform="rotate(-40 50 50)">
-							<rect x="40" y="24" width="20" height="52" rx="10" />
-							<circle cx="50" cy="30" r="9" />
-							<circle cx="50" cy="70" r="9" />
-						</g>
-					</svg>
+					<img src="img/joker-phone.png" alt="Telefonjoker" />
 				</div>
 				<div id="audience" class="options-button" data-bind="click: fadeOutOption">
-					<svg viewBox="0 0 100 100">
-						<circle class="joker-badge" cx="50" cy="50" r="44" />
-						<g class="joker-icon">
-							<circle cx="36" cy="40" r="9" />
-							<path d="M20 74c0-12 8-20 16-20s16 8 16 20z" />
-							<circle cx="64" cy="40" r="9" />
-							<path d="M48 74c0-12 8-20 16-20s16 8 16 20z" />
-						</g>
-					</svg>
+					<img src="img/joker-audience.png" alt="Publikumsjoker" />
+				</div>
+				<div id="extra-joker" class="options-button" data-bind="click: fadeOutOption">
+					<img src="img/joker-euro.png" alt="Zusatzjoker" />
 				</div>
 				<div id="money"><span data-bind="text: formatMoney()"></span> &euro;</div>
 			</div>
@@ -107,6 +94,6 @@ Author: Aaron Nech
 		<!-- Script inclusion: JQuery for effects, Knockout for MVVM, millionaire.js for application -->
 		<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript" src="js/knockout-3.0.0.js"></script>
-		<script type="text/javascript" src="js/millionaire.js"></script>
+		<script type="text/javascript" src="js/millionaire.js?v=2"></script>
 	</body>
 </html>

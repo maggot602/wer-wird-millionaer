@@ -188,7 +188,8 @@ var MillionaireModel = function(data) {
 $(document).ready(function() {
 	$.getJSON("questions.json", function(data) {
 		for(var i = 1; i <= data.games.length; i++) {
-			$("#problem-set").append('<option value="' + i + '">' + i + '</option>');
+			var label = data.games[i - 1].name || ('Spiel ' + i);
+			$("#problem-set").append($('<option>').val(i).text(label));
 		}
 		$("#pre-start").show();
 		$("#start").click(function() {

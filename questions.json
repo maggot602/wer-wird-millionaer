@@ -13,7 +13,7 @@
 					"correct": 0
 				},
 				{
-					"question": "Welchen ungewöhnlichen Führerschein besitzt Heike?",
+					"question": "Welchen ungewöhnlichen Führerschein hat Heike?",
 					"content": [
 						"Motorradführerschein",
 						"LKW-Führerschein",
@@ -33,7 +33,7 @@
 					"correct": 0
 				},
 				{
-					"question": "Wie hieß Heikes erster Hund, ein Collie?",
+					"question": "Wie hieß Heikes erster Hund – ein Collie?",
 					"content": [
 						"Nico",
 						"Rex",
@@ -43,7 +43,7 @@
 					"correct": 0
 				},
 				{
-					"question": "Wo war Heikes erste gemeinsame Wohnung mit ihrem Mann?",
+					"question": "Wo hatten Heike und Norbert ihre erste gemeinsame Wohnung?",
 					"content": [
 						"Hamburg-St. Pauli",
 						"Hamburg-Altona",
@@ -55,7 +55,7 @@
 				{
 					"question": "Wohin reist Heike am liebsten?",
 					"content": [
-						"Skandinavien (Schweden, Norwegen)",
+						"Skandinavien",
 						"Südostasien",
 						"Südamerika",
 						"Die Karibik"
@@ -63,7 +63,7 @@
 					"correct": 0
 				},
 				{
-					"question": "Welches Kartenspiel spielt Heike neuerdings leidenschaftlich?",
+					"question": "Welches Kartenspiel spielt Heike neuerdings leidenschaftlich gern?",
 					"content": [
 						"Schafkopf",
 						"Skat",
@@ -73,17 +73,17 @@
 					"correct": 0
 				},
 				{
-					"question": "Was war einer der schönsten Momente in Heikes bisherigen 70 Lebensjahren?",
+					"question": "Was war einer der schönsten Momente in Heikes 70 Lebensjahren?",
 					"content": [
 						"Heikes Hochzeit",
 						"Die Geburt ihrer Kinder",
 						"Die Geburt ihrer Enkelkinder",
-						"Als Norbert nach dem Kroatienurlaub sein zu kleines Wohnmobil kurzerhand verkauft hat"
+						"Als Norbert das zu kleine Wohnmobil nach dem Kroatienurlaub verkauft hat"
 					],
 					"correct": 3
 				},
 				{
-					"question": "Welches Hobby hat Heike vor Kurzem ganz neu für sich entdeckt?",
+					"question": "Welches Hobby hat Heike erst vor Kurzem für sich entdeckt?",
 					"content": [
 						"Line-Dance",
 						"Zumba",
@@ -93,12 +93,12 @@
 					"correct": 0
 				},
 				{
-					"question": "Wenn Heike eine Sache an ihrem Ehemann ändern könnte, würde sie …",
+					"question": "Was würde Heike an Norbert am liebsten ändern?",
 					"content": [
-						"sich wünschen, dass er den Kochlöffel schwingt",
-						"ihm die Werkzeuge wegnehmen, bevor er wieder etwas „repariert“",
-						"sich wünschen, dass er mal von selbst eine Massage anbietet",
-						"sich wünschen, dass er bei 180 km/h Abstand nicht mit einer Parklücke verwechselt"
+						"Dass er endlich freiwillig den Kochlöffel schwingt",
+						"Dass er aufhört, Dinge kaputt zu „reparieren“",
+						"Dass er ihr mal von sich aus eine Massage anbietet",
+						"Dass er bei 180 den Abstand nicht mit einer Parklücke verwechselt"
 					],
 					"correct": 3
 				},
@@ -117,23 +117,23 @@
 					"content": [
 						"Er trinkt es ganz in Ruhe und genüsslich",
 						"Er teilt es freiwillig mit Heike",
-						"Heike holt ihm wortlos ein Glas, ganz die vorbildliche Ehefrau",
-						"Heike trinkt heimlich die ganze Flasche leer und behauptet danach, nur genippt zu haben"
+						"Heike holt ihm brav ein Glas – wie es sich gehört",
+						"Heike trinkt die Flasche heimlich leer und will nur genippt haben"
 					],
 					"correct": 3
 				},
 				{
 					"question": "Welches sportliche Großereignis begann nur einen Tag nach Heikes Geburt, am 22. November 1956?",
 					"content": [
-						"Die Eröffnungsfeier der Olympischen Sommerspiele in Melbourne",
-						"Die Eröffnungsfeier der Olympischen Winterspiele in Cortina d'Ampezzo",
+						"Die Olympischen Sommerspiele in Melbourne",
+						"Die Olympischen Winterspiele in Cortina d'Ampezzo",
 						"Das erste Formel-1-Rennen der Geschichte",
 						"Die Gründung der Fußball-Bundesliga"
 					],
 					"correct": 0
 				},
 				{
-					"question": "Heike hat exakt denselben Geburtstag wie eine echte Hollywood-Schauspielerin. In welchem Kultfilm hätte Heike demnach mitspielen können?",
+					"question": "Heike hat exakt denselben Geburtstag wie eine echte Hollywood-Schauspielerin. In welchem Kultfilm hätte sie demnach mitspielen können?",
 					"content": [
 						"Dirty Dancing",
 						"Footloose",
@@ -143,7 +143,7 @@
 					"correct": 0
 				},
 				{
-					"question": "Bei der Hengstparade in Moritzburg – dem Gestüt, das fast genauso heißt wie Heikes Sohn Moritz – bildet eine ganz bestimmte Reiter-Vorführung den großen Abschluss. Wie heißt sie?",
+					"question": "Bei der Hengstparade in Moritzburg – dem Gestüt, das fast genauso heißt wie ihr Kronsohn – bildet eine ganz bestimmte Reiter-Vorführung den großen Abschluss. Wie heißt sie?",
 					"content": [
 						"Military",
 						"Voltigier-Kür",
@@ -153,7 +153,7 @@
 					"correct": 3
 				}
 			],
-			"name": "Persönliches Jubiläumsquiz"
+			"name": "Heikes Geburtstagsfragen"
 		},
 		{
 			"questions": [
@@ -308,10 +308,10 @@
 					"correct": 0
 				}
 			],
-			"name": "70. Geburtstag Allgemeinwissen"
+			"name": "Probespiel 70. Geburtstag"
 		},
 		{
-			"name": "Geburtstagsquiz",
+			"name": "Vorlage (Kahoot)",
 			"questions": [
 				{
 					"question": "Wie heisst [NAME] mit vollem Namen?",
