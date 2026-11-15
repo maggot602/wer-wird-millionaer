@@ -1,6 +1,16 @@
 {
 	"games": [
 		{
+			"name": "Heikes Geburtstagsfragen",
+			"sortQuestion": {
+				"question": "Sortieren Sie den Nachwuchs der Familie Hoffmann chronologisch – von alt nach jung!",
+				"items": [
+					"Franka",
+					"Mara",
+					"Lena",
+					"Thea"
+				]
+			},
 			"questions": [
 				{
 					"question": "Was isst Heike auf gar keinen Fall zum Frühstück?",
@@ -152,8 +162,7 @@
 					],
 					"correct": 3
 				}
-			],
-			"name": "Heikes Geburtstagsfragen"
+			]
 		},
 		{
 			"questions": [

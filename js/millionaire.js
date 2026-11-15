@@ -182,6 +182,105 @@ var MillionaireModel = function(data) {
 	}
 };
 
+/**
+* Auswahlrunde ("Fastest Finger First"): vier Antworten muessen in die
+* richtige Reihenfolge gebracht werden, bevor das eigentliche Spiel startet.
+*
+* @param sortQuestion { question: String, items: [4 Strings in korrekter Reihenfolge] }
+* @param onDone callback, wenn zur ersten Frage weitergegangen wird
+*/
+var startSortRound = function(sortQuestion, onDone) {
+	var letters = ['A', 'B', 'C', 'D'];
+	var display = sortQuestion.items.map(function(text, rank) {
+		return { text: text, rank: rank };
+	});
+
+	// Mischen, aber nie bereits in der richtigen Reihenfolge anzeigen
+	do {
+		for (var i = display.length - 1; i > 0; i--) {
+			var j = Math.floor(Math.random() * (i + 1));
+			var tmp = display[i];
+			display[i] = display[j];
+			display[j] = tmp;
+		}
+	} while (display.every(function(item, i) { return item.rank === i; }));
+
+	var picks = [];
+	var revealed = false;
+
+	$("#sort-question").text(sortQuestion.question);
+	var $answers = $("#sort-answers").empty();
+	display.forEach(function(item, i) {
+		var $box = $('<div class="answer sort-answer">')
+			.append($('<span class="answer-letter">').text(letters[i] + ':'))
+			.append($('<span>').text(item.text))
+			.append($('<span class="pick-num">'));
+		$box.on('click', function() {
+			if (revealed || picks.indexOf(i) !== -1)
+				return;
+			picks.push(i);
+			$box.addClass('picked').find('.pick-num').text(picks.length + '.');
+			$("#sort-reveal").prop('disabled', picks.length < 4);
+		});
+		$answers.append($box);
+	});
+
+	$("#sort-reset").off('click').on('click', function() {
+		if (revealed)
+			return;
+		picks = [];
+		$("#sort-answers .sort-answer").removeClass('picked').find('.pick-num').text('');
+		$("#sort-reveal").prop('disabled', true);
+	});
+
+	$("#sort-reveal").off('click').on('click', function() {
+		if (revealed || picks.length < 4)
+			return;
+		revealed = true;
+		$("#sort-controls").hide();
+
+		var allRight = picks.every(function(idx, pos) { return display[idx].rank === pos; });
+		picks.forEach(function(idx, pos) {
+			$("#sort-answers .sort-answer").eq(idx)
+				.removeClass('picked')
+				.addClass(display[idx].rank === pos ? 'sort-right' : 'sort-wrong');
+		});
+
+		// Loesung nacheinander einblenden, wie in der Show
+		var $list = $("#sort-solution-list").empty();
+		for (var rank = 0; rank < 4; rank++) {
+			var idx = display.findIndex(function(item) { return item.rank === rank; });
+			$list.append(
+				$('<li>')
+					.append($('<span class="sol-rank">').text(letters[idx] + ':'))
+					.append($('<span>').text(display[idx].text))
+			);
+		}
+		$("#sort-result").removeClass('right wrong').text('');
+		$("#sort-continue").hide();
+		$("#sort-solution").show();
+		$list.children().each(function(n, li) {
+			setTimeout(function() { $(li).addClass('shown'); }, 700 * (n + 1));
+		});
+		setTimeout(function() {
+			startSound(allRight ? 'rightsound' : 'wrongsound', false);
+			$("#sort-result")
+				.addClass(allRight ? 'right' : 'wrong')
+				.text(allRight ? 'Richtig sortiert!' : 'Leider nicht ganz richtig!');
+			$("#sort-continue").fadeIn('slow');
+		}, 700 * 5);
+	});
+
+	$("#sort-continue").off('click').on('click', function() {
+		$("#sort-round").fadeOut('slow', onDone);
+	});
+
+	$("#sort-controls").show();
+	$("#sort-solution").hide();
+	$("#sort-reveal").prop('disabled', true);
+	$("#sort-round").fadeIn('slow');
+}
+
 // Executes on page load, bootstrapping
 // the start game functionality to trigger a game model
 // being created
@@ -194,10 +293,16 @@ $(document).ready(function() {
 		$("#pre-start").show();
 		$("#start").click(function() {
 			var index = $('#problem-set').find(":selected").val() - 1;
-			ko.applyBindings(new MillionaireModel(data.games[index]));
+			var game = data.games[index];
+			ko.applyBindings(new MillionaireModel(game));
 			$("#pre-start").fadeOut('slow', function() {
 				startSound('background', true);
-				$("#game").fadeIn('slow');
+				var showGame = function() { $("#game").fadeIn('slow'); };
+				if (game.sortQuestion) {
+					startSortRound(game.sortQuestion, showGame);
+				} else {
+					showGame();
+				}
 			});
 		});
 	});
