@@ -24,6 +24,11 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_DIR = os.path.dirname(BASE_DIR)
 QUESTIONS_JSON = os.path.join(REPO_DIR, "questions.json")
 OUT_PDF = os.path.join(BASE_DIR, "heikes-geburtstagsfragen-slides.pdf")
+OUT_TITLE_PNG = os.path.join(BASE_DIR, "heikes-geburtstagsfragen-titel.png")
+
+# Titelbild (Startfolie)
+TITLE_HEADLINE = "Heikes 70. Geburtstag"
+TITLE_SUBLINE = "Wie gut kennt ihr das Geburtstagskind?"
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 GAME_INDEX = 0
@@ -48,6 +53,16 @@ def slide_html(label, question, answers):
         f'<div class="slide-label">{html.escape(label)}</div>'
         f'<div class="question-box"><span>{html.escape(question)}</span></div>'
         f'<div class="answer-grid">{answer_boxes}</div>'
+        '</div></section>'
+    )
+
+
+def title_slide_html():
+    return (
+        '<section class="slide"><div class="slide-inner title-inner">'
+        f'<img class="title-logo" src="{file_url(os.path.join(REPO_DIR, "img", "logo.png"))}" />'
+        f'<div class="title-headline">{html.escape(TITLE_HEADLINE)}</div>'
+        f'<div class="question-box"><span>{html.escape(TITLE_SUBLINE)}</span></div>'
         '</div></section>'
     )
 
@@ -78,8 +93,12 @@ def build():
         slides.append(slide_html(label, q["question"], answers))
         key.append((label, q["question"], f"{LETTERS[correct]}: {answers[correct]}"))
 
+    return page_html(slides), key
+
+
+def page_html(slides):
     css = file_url(os.path.join(REPO_DIR, "css", "style.css"))
-    doc = f"""<!DOCTYPE html>
+    return f"""<!DOCTYPE html>
 <html lang="de"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,600,700,800" rel="stylesheet">
 <link rel="stylesheet" href="{css}">
@@ -101,27 +120,39 @@ def build():
     text-transform: uppercase; text-shadow: 0 0 16px rgba(240, 194, 74, 0.5);
   }}
   .answer:hover {{ background: linear-gradient(180deg, #16428a 0%, #081d42 100%); }}
+  .title-logo {{ width: 300px; display: block; margin: 0 auto 14px; }}
+  .title-headline {{
+    color: #f0c24c; font-weight: 800; font-size: 46px; letter-spacing: 1px;
+    text-shadow: 0 0 22px rgba(240, 194, 74, 0.55);
+  }}
+  .title-inner .question-box {{ font-size: 1.6em; }}
 </style></head>
 <body>{"".join(slides)}</body></html>"""
-    return doc, key
 
 
-def main():
-    doc, key = build()
+def run_chrome(doc, extra_args):
     tmp = tempfile.mkdtemp(prefix="menti-slides-")
     try:
         html_path = os.path.join(tmp, "slides.html")
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(doc)
         subprocess.run([
-            CHROME, "--headless=new", "--disable-gpu", "--no-pdf-header-footer",
+            CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars",
             f"--user-data-dir={os.path.join(tmp, 'profile')}",
             "--virtual-time-budget=15000", "--allow-file-access-from-files",
-            f"--print-to-pdf={OUT_PDF}", file_url(html_path),
+            *extra_args, file_url(html_path),
         ], check=True, capture_output=True)
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 
+
+def main():
+    doc, key = build()
+    run_chrome(doc, ["--no-pdf-header-footer", f"--print-to-pdf={OUT_PDF}"])
+    run_chrome(page_html([title_slide_html()]),
+               ["--window-size=1920,1080", f"--screenshot={OUT_TITLE_PNG}"])
+
+    print(f"Titelbild geschrieben nach {OUT_TITLE_PNG}")
     print(f"{len(key)} Folien geschrieben nach {OUT_PDF}\n")
     print("Lösungen:")
     for label, question, solution in key:
